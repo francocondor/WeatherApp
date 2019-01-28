@@ -13,6 +13,7 @@ class WeatherLocation extends Component {
     constructor(props) {
         super(props);
         const { city } = props;
+        console.log(city);
         this.state = {
             city,
             data: null
