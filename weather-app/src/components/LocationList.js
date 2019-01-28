@@ -2,11 +2,12 @@ import React from 'react';
 import WeatherLocation from './WeatherLocation';
 import PropTypes from 'prop-types';
 
+const strToComponents = cities => {
+    cities.map( city => <WeatherLocation city={city}/>);
+};
 const LocationList = ({cities}) => (
     <div>
-        <WeatherLocation city="Barranco, PE" />
-        <WeatherLocation city="Bogota,col" />
-        <WeatherLocation city="Mexico,mex" />
+        {strToComponents(cities)}
     </div>
 );
 
