@@ -3,7 +3,7 @@ import './App.css';
 import LocationList from './components/LocationList';
 
 const cities = [
-  "Barranco, PE",
+  "Buenos Aires,ar",
   "Bogota,col",
   "Mexico,mex"
 ];
@@ -18,10 +18,17 @@ const cities = [
 ];*/
 
 class App extends Component {
+  handleSelectedLocation = city => {
+    console.log(`handleSelectedLocation ${city}`)
+  }
+
   render() {
     return (
       <div className="App">
-        <LocationList cities={cities}/>
+        <LocationList 
+          cities={cities}
+          onSelectedLocation= {this.handleSelectedLocation}
+        />
       </div>
     );
   }
