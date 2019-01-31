@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { Grid, Col, Row } from 'react-flexbox-grid';
 import './App.css';
 import LocationList from './components/LocationList';
+import ForecastExtended from './components/ForecastExtended';
 
 const cities = [
   "Buenos Aires,ar",
@@ -47,8 +48,10 @@ class App extends Component {
             />
           </Col>
           <Col xs={12} md={6}>
-            <Paper  elevation={4}>
-              <div className="details"></div>
+            <Paper zDepth={4}>
+              <div className="details">
+                <ForecastExtended city={'Buenos aires, ar'}></ForecastExtended>
+              </div>
             </Paper>
           </Col>
         </Row>
