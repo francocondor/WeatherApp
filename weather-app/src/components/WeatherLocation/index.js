@@ -23,7 +23,7 @@ class WeatherLocation extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("componentDidUpdate");
+        
     }
 
 
@@ -49,10 +49,11 @@ class WeatherLocation extends Component {
             {data
                 ? <WeatherData data={data}></WeatherData>
                 : <CircularProgres size={50} />}
-            <button onClick={this.handleUpdateClick}>Actualizar</button>
+            
         </div>);
     }
 };
+/*<button onClick={this.handleUpdateClick}>Actualizar</button>*/
 
 WeatherLocation.propTypes = {
     city: PropTypes.string.isRequired,
